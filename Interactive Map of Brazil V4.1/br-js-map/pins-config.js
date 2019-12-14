@@ -2,55 +2,55 @@
   "pins":[
   {
     "shape": "square",//either "circle" or "square"
-    "hover": "<b><u>MANAUS</u></b><br>Write any text and load images<br><img src='example.png'>",//info of the popup
+    "hover": "BLANK1",//info of the popup
     "pos_X": 174,//check the X, Y coordinates guide in the documentation
     "pos_Y": 107,
-    "size": 18,//size of the pin
+    "size": 0,//size of the pin
     "outline": "#000080",//outline color of the pin
     "upColor": "#1a1aff",//color of the pin when map load
     "overColor": "#66d9ff",//color of the pin when mouse hover
     "url": "https://www.html5interactivemaps.com/",//link to any webpage
     "target": "new_window",// use "new_window", "same_window", "modal", or "none"
-    "active": true//true/false to activate/deactivate this pin
+    "active": false//true/false to activate/deactivate this pin
   },
   {
     "shape": "circle",
-    "hover": "<b><u>CURITIBA</u></b><br><span style='color: #bcbcbc;'>Street Address:</span><br>&nbsp;321 Example, Address 54321<br><span style='color: #bcbcbc;'>Telephone:</span><br>&nbsp;(256) 555-4321 / (256) 555-1234",
+    "hover": "BLANK2",
     "pos_X": 306,
     "pos_Y": 387,
-    "size": 20,
+    "size": 0,
     "outline": "#660000",
     "upColor": "#e60000",
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
-    "hover": "<b><u>SÃO PAULO</u></b><br><span style='color: #999;'>Click to open a modal window!</span><br><span style='color: #ff6666;'><b>Modal Window Option is Compatible<br> with Bootstrap Only.</b></span>",
+    "hover": "BLANK3",
     "pos_X": 335,
     "pos_Y": 369,
-    "size": 16,
+    "size": 0,
     "outline": "#660000",
     "upColor": "#e60000",
     "overColor": "#ffd480",
     "url": "#mymodal",
     "target": "modal",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
-    "hover": "<b><u>FORTALEZA</u></b><br><span style='color: #999;'>*Click to open a webpage*</span>",
+    "hover": "BLANK4",
     "pos_X": 433,
     "pos_Y": 120,
-    "size": 14,
+    "size": 0,
     "outline": "#660000",
     "upColor": "#e60000",
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -63,7 +63,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -76,7 +76,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -89,7 +89,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -102,7 +102,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -115,7 +115,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -128,7 +128,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -141,7 +141,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -154,7 +154,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -167,7 +167,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -180,7 +180,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   },
   {
     "shape": "circle",
@@ -193,7 +193,7 @@
     "overColor": "#ffd480",
     "url": "https://www.html5interactivemaps.com/",
     "target": "same_window",
-    "active": true
+    "active": false
   }// If you want to add more pin, you need to add comma ',' here
   ]
 };
@@ -266,7 +266,7 @@ function brjsAddEvent(id) {
     obj.mouseup(function(){
       obj.css({"fill":pins_config.pins[id].overColor});
       if (pins_config.pins[id].target === "new_window"){
-        window.open(pins_config.pins[id].url);  
+        window.open(pins_config.pins[id].url);
       } else if (pins_config.pins[id].target === "same_window") {
         window.parent.location.href = pins_config.pins[id].url;
       } else if (pins_config.pins[id].target === "modal") {
