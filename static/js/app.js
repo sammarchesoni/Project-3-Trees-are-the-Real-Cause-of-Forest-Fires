@@ -25,13 +25,13 @@ function buildStatedata(state) {
     // buildGauge(data.WFREQ);
 
 
-function buildCharts(state) {
+function buildChart(state) {
 
   // Use `d3.json` to fetch the state data for the plots
   const url = "/state_data/" + state;
   d3.json(url).then(data => {
     console.log("Data: ", data);  
-    let dictLength = Object.keys(data).length
+    let dictLength = Object.keys(data).length;
     
   // Turn the big dictionary into the lists that plotly needs for inputs
     var date = [];
@@ -43,23 +43,7 @@ function buildCharts(state) {
       date.push(data[i]["date"]);
       index.push(i);
       number.push(data[i]["number"]);
-    }     
-    
-  //the keys with only their top 10 entries (the data was sorted in python before being served)
-        
-        // let otu_ids = samples["otu_ids"];
-         // let sample_values = samples["sample_values"];
-        // let otu_labels = samples["otu_labels"];
-    
-        // let trace1 = {
-        //   labels: otu_ids.slice(0, 10),
-        //   values: sample_values.slice(0, 10),
-        //   hovertext: otu_labels.slice(0, 10),
-        //   type: "pie"
-        // };
-    
-        // let pie_data = [trace1];
-        // Plotly.newPlot("pie", pie_data);
+    }
     
     let trace2 = {
       x: index,
@@ -75,7 +59,29 @@ function buildCharts(state) {
     let bubble_data = [trace2];
     Plotly.newPlot("bubble", bubble_data);
   });
+};
+
+function buildPie() {  
+  const url2 = "/pie/";
+  d3.json(url2).then(data => {
+    let dictLength2 = Object.keys(data).length;
+    var state_list = [];
+    var number_list = [];
+    var i = 0;
     
+    for (var i = 0; i < dictLength2; i++){
+      state_list.push(data[i]["state"]);
+      number_list.push(data[i]["number"]);
+    }
+    let trace1 = {
+      labels: state_list,
+      values: number_list,
+      type: "pie"
+    };
+
+    let pie_data = [trace1];
+    Plotly.newPlot("pie", pie_data); 
+  }); 
         // @TODO: Build a Bubble Chart using the sample data
     
         // @TODO: Build a Pie Chart
@@ -100,15 +106,14 @@ function init() {
     // Use the first sample from the list to build the initial plots
     // const firstSample = sampleNames[0];
     const firstSample = "Acre"
-    buildCharts(firstSample);
-    buildMetadata(firstSample);
+    buildChart(firstSample);
+    buildPie();
   });
 }
 
 function optionChanged(newState) {
   // Fetch new data each time a new sample is selected
-  buildCharts(newState);
-  buildMetadata(newState);
+  buildChart(newState);
 }
 
 // Initialize the dashboard
