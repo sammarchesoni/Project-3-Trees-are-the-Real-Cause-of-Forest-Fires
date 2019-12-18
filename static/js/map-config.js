@@ -298,10 +298,10 @@ var brjsconfig = {
         "active": true
     },
     "brjs4": {
-        "hover": "<b><u>AMAZONAS</u></b><br>907 118,691<br>",
+        "hover": "<b><u>AMAZONAS</u></b><br>118,691<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#BFFF00",
+        "upColor": "#FF0000",
         "overColor": "#D9FF66",
         "downColor": "#CAE9AF",
         "active": true
@@ -359,7 +359,7 @@ var brjsconfig = {
         "hover": "<b><u>MARANHÃO</u></b><br>395,889 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FFFF80",
+        "upColor": "#FFBF00",
         "overColor": "#ECFFB3",
         "downColor": "#CAE9AF",
         "active": true
@@ -376,7 +376,7 @@ var brjsconfig = {
     },
     "brjs12": {
         //"hover": "MATO GROSSO DO SUL",
-        "hover": "<b><u>MATO GROSSO DO SUL</u></b><br>n/a Fires<br>",
+        "hover": "<b><u>MATO GROSSO DO SUL</u></b><br>843,526 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
         "upColor": "#FF0000",
@@ -419,7 +419,7 @@ var brjsconfig = {
         "hover": "<b><u>PARÁ</u></b><br>638,042 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FFFF80",
+        "upColor": "#FF0000",
         "overColor": "#ECFFB3",
         "downColor": "#CAE9AF",
         "active": true
@@ -449,7 +449,7 @@ var brjsconfig = {
         "hover": "<b><u>RIO DE JANEIRO</u></b><br>11,424 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FF4000",
+        "upColor": "#FFFF00",
         "overColor": "#D9FF66",
         "downColor": "#CAE9AF",
         "active": true
@@ -459,8 +459,8 @@ var brjsconfig = {
         "hover": "<b><u>RIO GRANDE DO NORTE</u></b><br>14,245 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FF4000",
-        "overColor": "#ECFFB3",
+        "upColor": "#FFFF00",
+        "overColor": "#D9FF66",
         "downColor": "#CAE9AF",
         "active": true
     },
@@ -469,8 +469,8 @@ var brjsconfig = {
         "hover": "<b><u>RIO GRANDE DO SUL</u></b><br>51,020 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FF4000",
-        "overColor": "#ECFFB3",
+        "upColor": "#FFFF00",
+        "overColor": "#D9FF66",
         "downColor": "#CAE9AF",
         "active": true
     },
@@ -529,13 +529,13 @@ var brjsconfig = {
         "hover": "<b><u>TOCANTINS</u></b><br>244,382 Fires<br>",
         "url": "#mymodal",
         "target": "same_window",
-        "upColor": "#FFFF80",
+        "upColor": "#FFBF00",
         "overColor": "#ECFFB3",
         "downColor": "#CAE9AF",
         "active": true
     },
     "general": {
         "borderColor": "#9CA8B6",
-        "visibleNames": "transparent"
+        "visibleNames": "black"
     }
 };
