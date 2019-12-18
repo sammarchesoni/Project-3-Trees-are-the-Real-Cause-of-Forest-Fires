@@ -37,27 +37,43 @@ function buildChart(state) {
     var date = [];
     var index = [];
     var number = [];
+    var marker_list_color = [];
+    var marker_list_opacity = [];
+    var marker_list_size = [];
     var i = 0;
     
     for (var i = 0; i < dictLength; i++){
       date.push(data[i]["date"]);
       index.push(i);
       number.push(data[i]["number"]);
+      if (data[i]["max"] == 1) {
+        marker_list_color.push("red");
+        marker_list_opacity.push(.3);
+        marker_list_size.push(15);
+      };
+      if (data[i]["max"] == 0) {
+        marker_list_color.push("green");
+        marker_list_opacity.push(.3);
+        marker_list_size.push(10);
+      };
     }
-    
+
     let trace2 = {
+      title : "Monthly fire reports",
       x: index,
       y: number,
       color: "red",
       text: date,
       mode: "markers",
       marker: {
-        opacity: 0.3,
-        color: "red"
-      }
+        opacity : marker_list_opacity,
+        color : marker_list_color,
+        size : marker_list_size
+      },
     };
     let bubble_data = [trace2];
-    Plotly.newPlot("bubble", bubble_data);
+    let layout = {showlegend: true};
+    Plotly.newPlot("bubble", bubble_data, layout);
   });
 };
 
